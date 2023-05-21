@@ -1,0 +1,74 @@
+/* CSS Document */
+
+@font-face {
+    font-family: 'code';
+    src: url("http://106.14.163.159:54962/consola.ttf");
+}
+.right h1{
+	margin-top: 0px;
+}
+body{
+	margin:0px;
+}
+.main-sidebar {
+  height: 900vw;
+  overflow-y: hidden;
+  width: 250px;
+  background:#111;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.menu{
+  padding-left: 0px;
+}
+.right{
+	position: absolute;
+	margin-left: 270px;
+	padding-left: 24px;
+	top: 24px;
+}
+.nav-item{
+	height:24px;
+	color: #fff;
+	list-style:none;
+	padding-left: 12px;
+	padding-top : 8px;
+	border-radius: 9px;
+}
+.nav-item.actived{
+	color: #fff;
+    background-color: #007bff;
+}
+.code{
+	border:3px solid #00CC66;
+	width:1110px;
+	font-family: code;
+	overflow:auto;
+}
+.code1 {
+	border:3px solid #00CC66;
+	width:1110px;
+	font-family: code;
+}
+.classname{
+	color:#069;
+}
+
+.titl{
+	padding-top: 16px;
+	color: #fff;
+	font-size: 24px;
+	text-align: center;
+	
+}
+
+.heimu{
+	color: #000;
+	background-color: #000;
+	border-radius: 5px !important;
+}
+
+.heimu.mouseenter{
+	color: #fff;
+	background-color: #000;
+}

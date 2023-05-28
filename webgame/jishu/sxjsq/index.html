@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>数学求解器&nbsp;[未实现][制作中]</title>
+</head>
+	<script src="../../js/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function (){
+			$("hei_mu").hover(function (){
+				$(this).addClass("show");
+			},function (){
+				$(this).removeClass("show");
+			});
+		})
+	</script>
+	<style>
+		.hei_mu
+		{
+			border-width: 5px;
+			border-radius: 5px;
+			border-color: black;
+			background-color: black;
+		}
+		.hei_mu.show
+		{
+			color: white;
+		}
+	</style>
+	<style>
+        .dv {
+            margin:0 auto;
+            background:-webkit-linear-gradient(left,#0000CD,#FF0000 25%,#0000CD 50%,#FF0000 75%,#0000CD);
+            color:transparent;
+            -webkit-background-clip:text;
+            background-size:200% 100%;
+            animation:masked-animation 3s infinite linear;
+        }
+        @-webkit-keyframes masked-animation {
+            0% {
+                background-position:0 0;
+            }
+            100% {
+                background-position:-100% 0;
+            }
+        }
+	</style>
+<body>
+	<script>
+		sjxjsq()
+		{
+		if(a+b>c)
+		{
+			if(a+c>b)
+			{
+				if(c+b>a)
+				   {
+				   
+				   }
+			}
+		}	
+		}
+	</script>
+	 <font class="dv" size="+8">数学求解器&nbsp;[未实现][制作中]</font> 
+   <hr>
+	制作这个的灵感来源于我2022年9月左右用Java写过一个三角形三边计算器，用处就是输入三个数作为三边长，程序会自动判断这三边能不能组成三角形<br>
+	原理很简单，就是嵌套三层if每次取两个数加起来和第三数比较，第一层比较完大于第三数就执行第二层，第二层通过后执行第三层，三层都通过就输出true表示可以组成，反之:其中任何一层不通过就会输出false表示不能组成<br>
+	当时写完很有成就感，现在想想有手就行&nbsp;所以想做进一步升级把它做进网页中方便随时使用<font class="hei_mu">毕竟之前写的.class想使用还要安装java运行环境和编译器，就很麻烦</font><br>
+	正在努力制作中......
+</body>
+</html>

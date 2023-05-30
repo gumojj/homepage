@@ -48,6 +48,16 @@
 }
 </style>
 <style>
+	#flash-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 324px;
+  height: 133px;
+  background-image: url(GDD.png);
+  background-repeat: no-repeat;
+}
         .dv {
             margin:0 auto;
             background:-webkit-linear-gradient(left,#FF0000,#0000CD 25%,#FF0000 50%,#0000CD 75%,#FF0000);
@@ -101,26 +111,124 @@
 			"27":"“网页可以直接用IIS挂”\xa0\xa0\xa0“用于开发”\xa0\xa0\xa0“localhost:8080即可”\xa0\xa0\xa0“我一般直接打开html文件看”\xa0\xa0\xa0“9”",
 			"28":"那能行吗",
 			"29":"byd别人沉迷游戏你沉迷写网页是吧",
-	        "30":"100kg当量的优香地雷:("
+	        "30":"100kg当量的优香地雷:(",
+			"31":"公鸡下蛋"
 
 	}
 		function huishengdong(){
-			o=Math.floor(Math.random()*30+1)
+			o=Math.floor(Math.random()*31+1)
 			o=o+''
 			$('#huishengdong').text(say_list[o])
 		}
+		var isPlaying = false;
 		function caidan(){
 			var a = String(document.getElementById("caidan").value);
-			let isPlaying = false;
   if (a === "BlueArchive" && isPlaying === false) {
    isPlaying = true;
    const music = new Audio('mp3/ConstantModerato.m4a');
    music.play();
    music.loop =true;
-   alert("BlueArchive!");
-   music.addEventListener('ended', function() {
-      isPlaying = false;
-    });
+   document.getElementById("caidan2").innerText = "BlueArchive!";
+  }
+  if (a === "GAME DEVELOPMENT DEPARTMENT" && isPlaying === false) {
+   isPlaying = true;
+   const music = new Audio('mp3/GDD.mp3');
+   music.play();
+   music.loop =true;
+   document.getElementById("caidan2").innerText = "ゲーム～ゲ～ム～ゲームがやりたい～";
+	   // 创建图片元素并添加到页面中
+  var img = document.createElement("img");
+  img.src = "GDD.png";
+  img.id = "flash-image";
+  document.body.appendChild(img);
+
+  // 获取图片元素的引用
+  var flashImg = document.getElementById("flash-image");
+
+  // 设置图片初始位置
+  var posX = window.innerWidth / 2 - flashImg.offsetWidth / 2;
+  var posY = window.innerHeight / 2 - flashImg.offsetHeight / 2;
+  flashImg.style.left = posX + "px";
+  flashImg.style.top = posY + "px";
+
+  // 设置移动方向和速度
+  var moveX = 5;
+  var moveY = 5;
+
+  // 定义动画 循环播放
+  function animate() {
+    // 移动图片
+    posX += moveX;
+    posY += moveY;
+    flashImg.style.left = posX + "px";
+    flashImg.style.top = posY + "px";
+
+    // 碰到浏览器窗口边缘反弹
+    if (posX + flashImg.offsetWidth >= window.innerWidth || posX <= 0) {
+      moveX *= -1;
+    }
+    if (posY + flashImg.offsetHeight >= window.innerHeight || posY <= 0) {
+      moveY *= -1;
+    }
+
+    // 重复执行动画
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  }
+  if (a === "游戏开发部" && isPlaying === false) {
+   isPlaying = true;
+   const music = new Audio('mp3/GDD.mp3');
+   music.play();
+   music.loop =true;
+   document.getElementById("caidan2").innerText = "ゲーム～ゲ～ム～ゲームがやりたい～";
+	   // 创建图片元素并添加到页面中
+  var img = document.createElement("img");
+  img.src = "GDD.png";
+  img.id = "flash-image";
+  document.body.appendChild(img);
+
+  // 获取图片元素的引用
+  var flashImg = document.getElementById("flash-image");
+
+  // 设置图片初始位置
+  var posX = window.innerWidth / 2 - flashImg.offsetWidth / 2;
+  var posY = window.innerHeight / 2 - flashImg.offsetHeight / 2;
+  flashImg.style.left = posX + "px";
+  flashImg.style.top = posY + "px";
+
+  // 设置移动方向和速度
+  var moveX = 5;
+  var moveY = 5;
+
+  // 定义动画 循环播放
+  function animate() {
+    // 移动图片
+    posX += moveX;
+    posY += moveY;
+    flashImg.style.left = posX + "px";
+    flashImg.style.top = posY + "px";
+
+    // 碰到浏览器窗口边缘反弹
+    if (posX + flashImg.offsetWidth >= window.innerWidth || posX <= 0) {
+      moveX *= -1;
+    }
+    if (posY + flashImg.offsetHeight >= window.innerHeight || posY <= 0) {
+      moveY *= -1;
+    }
+
+    // 重复执行动画
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+  }
+   if (a === "?") {
+   alert("??????");
+  }
+  if (a === "？") {
+   alert("??????");
   }
  }
 	</script>
@@ -182,7 +290,7 @@
 	<li><font color="#00581A">草文字公示栏，会经常更新一些从各处看到的草文字</font><br>也请大家发一下您向孩子了解学习生活情况，关<br>心陪伴孩子的照片。青春期孩子的成长离不开您<br>的陪伴，用照片记录没好瞬间，让孩子内心感到<br>腥辐&nbsp;&nbsp;也许他们表面不愿意，甚至拒绝，但内<br>心需要。<br>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;最好发本群，也可私发</li><br>
 		<li><font class="dv">彩蛋码</font></li>
-			<input type="text" id="caidan">&nbsp;<button onclick="caidan()">确定</button><br>
+			<input type="text" id="caidan">&nbsp;<button onclick="caidan()">确定</button><br><p id="caidan2"></p>
 	<hr>
 		<h2 class="text-center">gumojjの快乐老挝</h2><br>
 		<p align="center"><a class="button" href="webgame/jishu/index.html"><span>技术展示区</span></a></p><br>
